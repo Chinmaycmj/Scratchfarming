@@ -1,0 +1,74 @@
+{
+  "test_scenarios": [
+    {
+      "id": "scenario_1",
+      "name": "Hyper-Arid Red Dune Basin",
+      "image_file": "scenario_1_arid_desert.jpg",
+      "narrative": "You awaken in a sun-bleached desert basin surrounded by moving sand dunes. Surface temperatures exceed 48°C during peak midday hours. Soil texture analysis indicates 91% coarse sand with less than 0.3% organic matter. Water poured onto the ground percolates straight through within 4 seconds, leaving zero residual moisture in the top 15cm. Trace boron mineral deposits are present, and soil pH tests at 8.4. Night temperatures plunge to 11°C with severe desiccation winds.",
+      "expected_limiting_factors": [
+        "Rapid percolation (0 moisture retention)",
+        "Severe nutrient leaching & low CEC",
+        "Midday thermal stress (>48°C)",
+        "Alkaline pH 8.4"
+      ],
+      "recommended_crops": ["Pearl Millet", "Tepary Beans", "Grain Sorghum"],
+      "sample_curveball": "An unseasonal dust storm covers the field with 5cm of fine silicate dust on Day 18. What adjustments are made?"
+    },
+    {
+      "id": "scenario_2",
+      "name": "Brackish Coastal Saline Basin",
+      "image_file": "scenario_2_coastal_saline.jpg",
+      "narrative": "You stand on a low-lying coastal shoreline flat approximately 400 meters inland from a tidal lagoon. The surface is heavily encrusted with a visible white crystalline salt crust. Soil Electrical Conductivity (EC) measures an extreme 7.8 dS/m, with a high Sodium Adsorption Ratio (SAR). Although groundwater is reachable at 60cm depth, it is brackish and unusable without reverse osmosis. When rainwater falls, the dispersed sodic clay forms an impermeable surface sludge that chokes all seedling respiration.",
+      "expected_limiting_factors": [
+        "High Electrical Conductivity (EC 7.8 dS/m)",
+        "Osmotic drought (roots cannot absorb saline water)",
+        "Sodium (Na+) cellular toxicity",
+        "Dispersed soil structure"
+      ],
+      "recommended_crops": ["Barley", "Quinoa", "Sugar Beet"],
+      "sample_curveball": "A king tide floods the lower perimeter with 10cm of saltwater on Day 30. How do you flush the rhizosphere?"
+    },
+    {
+      "id": "scenario_3",
+      "name": "Acidic Tropical Laterite Clay Clearcut",
+      "image_file": "scenario_3_acidic_clay.jpg",
+      "narrative": "You find yourself in an abandoned, rain-beaten clearing in a degraded tropical rainforest. The soil is a striking, deep reddish-orange heavy kaolinitic clay marked by deep surface fissures and severe gully erosion. Laboratory titration reveals an acutely toxic pH of 4.5. Soluble Aluminum (Al3+) concentration is high, causing immediate root tip burning on any tender vegetable trial. Total available phosphorus is under 4 ppm because phosphate anions are locked tightly inside iron and aluminum lattices.",
+      "expected_limiting_factors": [
+        "Severe Aluminum (Al3+) toxicity",
+        "Acute Phosphorus chemical fixation",
+        "Low pH 4.5",
+        "Heavy compaction and erosion gullies"
+      ],
+      "recommended_crops": ["Cassava", "Sweet Potato", "Cowpea"],
+      "sample_curveball": "Heavy torrential monsoon rain washes away your top lime broadcast on Day 10. How do you recover phosphorus bioavailability?"
+    },
+    {
+      "id": "scenario_4",
+      "name": "Eroded Alpine Rocky Scree Slope",
+      "image_file": "scenario_4_rocky_slope.jpg",
+      "narrative": "You wake up on a steep 32-degree mountainside slope at an elevation of 2,400 meters. The ground consists of loose shattered shale stones and gravel scree with less than 8cm of true skeletal soil depth. High solar ultraviolet radiation during the day alternates with sub-zero wind chills at night. Any rainfall generates swift surface runoff that washes away organic detritus down the mountain slope before microbial colonies can establish.",
+      "expected_limiting_factors": [
+        "Shallow skeletal topsoil (<8cm)",
+        "Steep slope gravitational erosion",
+        "Severe diurnal temperature swing",
+        "High wind desiccation & UV"
+      ],
+      "recommended_crops": ["Grain Amaranth", "Buckwheat", "Cold-Hardy Potatoes"],
+      "sample_curveball": "An early seasonal mountain frost hits on Day 25. How do you protect emerging root tubers?"
+    },
+    {
+      "id": "scenario_5",
+      "name": "Waterlogged Silt Wetland Peat Basin",
+      "image_file": "scenario_5_wetland_peat.jpg",
+      "narrative": "You are positioned in a saturated, sluggish river delta basin where stagnant water pools across 40% of the field surface. The soil is a dense, black anaerobic peat and silt muck with over 14% undecomposed organic matter. Strong hydrogen sulfide (rotten egg) odors indicate complete oxygen depletion (rhizosphere anoxia). Soil temperatures remain cold (13°C), and planted seedlings succumb within 48 hours to waterborne fungal Pythium and damping-off root rot.",
+      "expected_limiting_factors": [
+        "Complete rhizosphere anoxia (zero oxygen)",
+        "Hydrogen sulfide (H2S) anaerobic toxicity",
+        "High water table and fungal root rot",
+        "Cold soil temperature"
+      ],
+      "recommended_crops": ["Swamp Taro (Colocasia)", "Deep-Water Rice", "Water Spinach"],
+      "sample_curveball": "Surrounding river basin rises by another 15cm due to upstream dam release on Day 40. How do you prevent crop drown-out?"
+    }
+  ]
+}
