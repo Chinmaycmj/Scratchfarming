@@ -1,12 +1,20 @@
 {
+  "metadata": {
+    "title": "Scratch Farming Agricultural Knowledge Base",
+    "version": "3.0.0",
+    "specification": "Strict Grounding Specification - Zero External Hallucination",
+    "author": "Laptop 1 Knowledge Base Engine"
+  },
   "soil_archetypes": {
     "arid_sandy": {
       "name": "Arid / Hyper-Sandy Desert",
       "baseline_ph": 8.4,
+      "target_ph": 6.8,
       "salinity_ec_ds_m": 2.8,
       "moisture_retention_pct": 12,
       "organic_matter_pct": 0.4,
       "texture": "Coarse Sand (Sand > 88%)",
+      "visual_markers": "Pale tan to light brown coarse sand, loose granules, absence of vegetative cover, thermal shimmering.",
       "fatal_limiting_factors": [
         "Rapid percolation (0 water retention)",
         "Severe organic matter and micronutrient leaching",
@@ -15,30 +23,35 @@
       ],
       "primary_remediation": [
         {
+          "phase": "Phase 1: Structural Retention",
           "amendment": "Biochar + Bentonite Clay",
           "dosage": "1.5 kg/m² Biochar + 500g/m² Clay",
-          "rationale": "Permanently increases Cation Exchange Capacity (CEC) and creates water retention sponges in the sand."
+          "scientific_rationale": "Permanently increases Cation Exchange Capacity (CEC) and creates water retention sponges in coarse sand."
         },
         {
+          "phase": "Phase 2: Thermal Suppression",
           "amendment": "Heavy Surface Mulch (Straw / Shredded Plant Matter)",
           "dosage": "5-10 cm layer",
-          "rationale": "Reduces direct solar evaporation by 75% and suppresses soil surface heating."
+          "scientific_rationale": "Reduces direct solar evaporation by 75% and suppresses soil surface heating."
         },
         {
+          "phase": "Phase 3: Root-Zone Sub-Irrigation",
           "amendment": "Subsurface Olla Pots / Deep Sub-Irrigation",
-          "dosage": "Unburied unglazed clay pots every 1m",
-          "rationale": "Directly irrigates root zones via osmotic seepage with zero surface evaporation loss."
+          "dosage": "Unglazed porous clay pots every 1m",
+          "scientific_rationale": "Directly irrigates root zones via osmotic seepage with zero surface evaporation loss."
         }
       ],
-      "top_crops": ["Pearl Millet", "Grain Sorghum", "Tepary Beans", "Cowpeas", "Date Palm"]
+      "top_crops": ["Pearl Millet", "Tepary Beans", "Grain Sorghum", "Cowpea"]
     },
     "coastal_saline": {
       "name": "Coastal / Saline / Sodic Soil",
       "baseline_ph": 8.6,
+      "target_ph": 6.8,
       "salinity_ec_ds_m": 7.8,
       "moisture_retention_pct": 45,
       "organic_matter_pct": 1.1,
       "texture": "Saline Loam / Dispersed Clay",
+      "visual_markers": "Surface white crystalline efflorescence, hexagonal polygon cracking, dispersed grayish muddy sublayer.",
       "fatal_limiting_factors": [
         "High Electrical Conductivity (EC > 6 dS/m) causing osmotic drought",
         "Sodium ion (Na+) toxicity disrupting cellular potassium absorption",
@@ -47,30 +60,35 @@
       ],
       "primary_remediation": [
         {
+          "phase": "Phase 1: Chemical Displacement",
           "amendment": "Gypsum (Calcium Sulfate - CaSO4)",
           "dosage": "400g - 600g per m²",
-          "rationale": "Calcium ions (Ca2+) displace toxic Sodium (Na+) from clay surfaces, allowing sodium to be leached downward."
+          "scientific_rationale": "Calcium ions (Ca2+) displace toxic Sodium (Na+) from clay surfaces, allowing sodium to be leached downward."
         },
         {
+          "phase": "Phase 2: Freshwater Leaching",
           "amendment": "Heavy Freshwater Flood Leaching",
           "dosage": "100-150 liters per m² across raised beds",
-          "rationale": "Flushes displaced soluble sodium chloride below the root rhizosphere."
+          "scientific_rationale": "Flushes displaced soluble sodium chloride below the root rhizosphere."
         },
         {
+          "phase": "Phase 3: Water Table Isolation",
           "amendment": "Raised Drainage Ridge Mounds (35cm)",
           "dosage": "Mounds 35cm high with 20cm gravel base",
-          "rationale": "Prevents capillary rise of brackish saline groundwater into the topsoil."
+          "scientific_rationale": "Prevents capillary rise of brackish saline groundwater into the topsoil."
         }
       ],
-      "top_crops": ["Barley (Hordeum vulgare)", "Quinoa", "Sugar Beet", "Asparagus", "Halophyte Spinach"]
+      "top_crops": ["Barley", "Quinoa", "Sugar Beet", "Cowpea"]
     },
     "acidic_clay": {
       "name": "Acidic Tropical Clay (Laterite / Ultisol)",
       "baseline_ph": 4.5,
+      "target_ph": 6.2,
       "salinity_ec_ds_m": 0.3,
       "moisture_retention_pct": 82,
       "organic_matter_pct": 1.4,
       "texture": "Dense Kaolinitic Clay",
+      "visual_markers": "Deep reddish-orange iron oxidation, sharp erosion gullies, dense blocky crusting, stunted shrub foliage.",
       "fatal_limiting_factors": [
         "Soluble Aluminum (Al3+) and Manganese toxicity inhibiting root elongation",
         "Severe chemical lockup of Phosphorus into insoluble Aluminum-Phosphate compounds",
@@ -79,30 +97,35 @@
       ],
       "primary_remediation": [
         {
+          "phase": "Phase 1: Chemical Neutralization",
           "amendment": "Agricultural Lime (Calcium Carbonate - CaCO3) or Dolomite",
           "dosage": "350g - 500g per m²",
-          "rationale": "Raises pH from 4.5 to 6.2, precipitating soluble toxic Al3+ into inert aluminum hydroxide."
+          "scientific_rationale": "Raises pH from 4.5 to 6.2, precipitating soluble toxic Al3+ into inert aluminum hydroxide."
         },
         {
+          "phase": "Phase 2: Bioavailable Phosphorus",
           "amendment": "Rock Phosphate + Mycorrhizal Fungi Inoculant",
           "dosage": "150g per m²",
-          "rationale": "Replenishes phosphorus in slow-release form; fungal hyphae bridge root absorption."
+          "scientific_rationale": "Replenishes phosphorus in slow-release form; fungal hyphae bridge root absorption."
         },
         {
+          "phase": "Phase 3: Aerobic Aeration",
           "amendment": "Biochar Aeration Incorporation",
           "dosage": "2.0 kg per m²",
-          "rationale": "Breaks tight clay lattices, introducing micro-channels for oxygen and microbial aerobic life."
+          "scientific_rationale": "Breaks tight clay lattices, introducing micro-channels for oxygen and microbial aerobic life."
         }
       ],
-      "top_crops": ["Cassava (Manihot esculenta)", "Sweet Potato", "Upland Rice", "Cowpea", "Pineapple"]
+      "top_crops": ["Cassava", "Sweet Potato", "Cowpea", "Grain Amaranth"]
     },
     "rocky_slope": {
       "name": "Degraded / Eroded Rocky Mountainous Slope",
       "baseline_ph": 6.8,
+      "target_ph": 6.5,
       "salinity_ec_ds_m": 0.5,
       "moisture_retention_pct": 20,
       "organic_matter_pct": 0.8,
       "texture": "Skeletal Lithic Soil (< 10cm depth)",
+      "visual_markers": "Shattered shale stones, loose gravel scree, thin skeletal brown dirt, steep gravitational slope.",
       "fatal_limiting_factors": [
         "Shallow topsoil horizon unable to support taproots",
         "Rapid torrential rainwater runoff and slope erosion",
@@ -111,30 +134,35 @@
       ],
       "primary_remediation": [
         {
+          "phase": "Phase 1: Runoff Interception",
           "amendment": "Contour Stone Bunding & Swales",
           "dosage": "Swales dug along contour lines every 3m",
-          "rationale": "Harvests 90% of slope runoff and stops topsoil sediment loss."
+          "scientific_rationale": "Harvests 90% of slope runoff and stops topsoil sediment loss."
         },
         {
+          "phase": "Phase 2: Living Bio-Retaining Wall",
           "amendment": "Vetiver Grass Living Barriers",
           "dosage": "Planted along berm edges at 15cm spacing",
-          "rationale": "Dense massive 3m root system creates an underground living retaining wall."
+          "scientific_rationale": "Dense massive 3m root system creates an underground living retaining wall."
         },
         {
+          "phase": "Phase 3: Topsoil Bladder Deepening",
           "amendment": "Compost Sheet Mulching & Soil Bladder Building",
           "dosage": "3 kg per m² of organic matter",
-          "rationale": "Artificially deepens the topsoil layer from 8cm to 25cm."
+          "scientific_rationale": "Artificially deepens the topsoil layer from 8cm to 25cm."
         }
       ],
-      "top_crops": ["Grain Amaranth", "Buckwheat", "Cold-Hardy Potatoes", "Winter Rye", "Lentils"]
+      "top_crops": ["Grain Amaranth", "Buckwheat", "Cold-Hardy Potatoes", "Cowpea"]
     },
     "waterlogged_wetland": {
       "name": "Waterlogged Silt Wetland / Peat Marsh",
       "baseline_ph": 5.8,
+      "target_ph": 6.5,
       "salinity_ec_ds_m": 0.6,
       "moisture_retention_pct": 95,
       "organic_matter_pct": 14.0,
       "texture": "Heavy Anaerobic Silt / Muck",
+      "visual_markers": "Standing dark water puddles, black saturated peat muck, anaerobic bubbles, reeds and marsh grasses.",
       "fatal_limiting_factors": [
         "Complete root rhizosphere anoxia (zero dissolved oxygen)",
         "Accumulation of toxic reduced compounds (H2S and methane)",
@@ -143,104 +171,171 @@
       ],
       "primary_remediation": [
         {
+          "phase": "Phase 1: Water Table Drawdown",
           "amendment": "Herringbone French Drainage Ditches",
           "dosage": "Ditches 40cm deep sloped toward retention pond",
-          "rationale": "Rapidly drops gravitational water table below active root zone."
+          "scientific_rationale": "Rapidly drops gravitational water table below active root zone."
         },
         {
+          "phase": "Phase 2: Chinampa Elevated Ridges",
           "amendment": "High Raised Ridge Mounding (Chinampa style)",
           "dosage": "Raised beds 40cm above water level",
-          "rationale": "Elevates root zone into aerobic atmospheric contact while drawing moisture from below."
+          "scientific_rationale": "Elevates root zone into aerobic atmospheric contact while drawing moisture from below."
         },
         {
+          "phase": "Phase 3: Macro-Pore Aeration",
           "amendment": "Coarse Sand & Aerated Compost Blending",
           "dosage": "1.5 kg sand per m²",
-          "rationale": "Restores structural macro-pore spaces for gas exchange."
+          "scientific_rationale": "Restores structural macro-pore spaces for gas exchange."
         }
       ],
-      "top_crops": ["Swamp Taro (Colocasia esculenta)", "Deep-Water Rice", "Water Spinach (Kangkong)", "Lotus Root", "Cranberries"]
+      "top_crops": ["Swamp Taro", "Deep-Water Rice", "Water Spinach", "Cowpea"]
     }
   },
-  "crop_catalog": [
-    {
-      "name": "Cassava",
+  "crop_catalog": {
+    "Cassava": {
+      "crop_name": "Cassava",
       "category": "High-Calorie Root",
       "ph_range": [4.0, 7.5],
       "max_ec_salinity": 1.5,
       "drought_tolerance": "Extreme",
       "days_to_emergence": 10,
-      "days_to_full_harvest": 180,
-      "caloric_density_kcal_per_100g": 160,
-      "tier": "Tier 2: Long-Term Survival Anchor",
+      "days_to_harvest": 180,
+      "emergency_days": 60,
+      "calories": "160 kcal / 100g",
+      "tier": "Tier 2: Long-Term Caloric Anchor",
       "why_viable": "Immune to acidic soils and low phosphorus; massive root starch yield even in degraded soil.",
       "failure_mitigation": "Requires well-drained mounds to prevent root rot in heavy rain."
     },
-    {
-      "name": "Cowpea",
+    "Cowpea": {
+      "crop_name": "Cowpea",
       "category": "Protein Legume",
       "ph_range": [5.2, 7.8],
       "max_ec_salinity": 3.5,
       "drought_tolerance": "High",
       "days_to_emergence": 5,
-      "days_to_first_edible": 22,
-      "days_to_full_harvest": 60,
-      "caloric_density_kcal_per_100g": 116,
+      "days_to_harvest": 60,
+      "emergency_days": 22,
+      "calories": "116 kcal / 100g",
       "tier": "Tier 1: Emergency Rapid Greens",
       "why_viable": "Yields protein-rich edible young leaves in 22 days; symbiotic rhizobia restore nitrogen to dead soil.",
       "failure_mitigation": "Harvest leaves selectively from outer branches to preserve pod development."
     },
-    {
-      "name": "Pearl Millet",
+    "Pearl Millet": {
+      "crop_name": "Pearl Millet",
       "category": "Cereal Grain",
       "ph_range": [5.5, 8.5],
       "max_ec_salinity": 4.0,
       "drought_tolerance": "Extreme",
       "days_to_emergence": 4,
-      "days_to_full_harvest": 75,
-      "caloric_density_kcal_per_100g": 378,
+      "days_to_harvest": 75,
+      "emergency_days": 30,
+      "calories": "378 kcal / 100g",
       "tier": "Tier 2: Drought Carbohydrate Staple",
       "why_viable": "C4 photosynthetic pathway allows high biomass production even at 45°C in hyper-arid sand.",
       "failure_mitigation": "Thin seedlings early to avoid intra-plant water competition."
     },
-    {
-      "name": "Barley",
+    "Barley": {
+      "crop_name": "Barley",
       "category": "Salt-Tolerant Grain",
       "ph_range": [6.0, 8.5],
       "max_ec_salinity": 8.0,
       "drought_tolerance": "Moderate",
       "days_to_emergence": 6,
-      "days_to_full_harvest": 85,
-      "caloric_density_kcal_per_100g": 354,
+      "days_to_harvest": 85,
+      "emergency_days": 35,
+      "calories": "354 kcal / 100g",
       "tier": "Tier 2: Saline Cereal Anchor",
       "why_viable": "Highest salt tolerance of all major agricultural grains; excludes sodium at root tonoplast.",
       "failure_mitigation": "Must ensure adequate nitrogen and calcium to compete with sodium uptake."
     },
-    {
-      "name": "Grain Amaranth",
+    "Grain Amaranth": {
+      "crop_name": "Grain Amaranth",
       "category": "Rapid Pseudocereal",
       "ph_range": [5.5, 7.8],
       "max_ec_salinity": 3.0,
       "drought_tolerance": "High",
       "days_to_emergence": 4,
-      "days_to_first_edible": 20,
-      "days_to_full_harvest": 50,
-      "caloric_density_kcal_per_100g": 371,
+      "days_to_harvest": 50,
+      "emergency_days": 20,
+      "calories": "371 kcal / 100g",
       "tier": "Tier 1: Fast Complete Protein",
       "why_viable": "Extremely fast growing; edible greens in 20 days; grain contains complete amino acid profile (high lysine).",
       "failure_mitigation": "Protect tiny emerging seeds from heavy torrential washouts."
     },
-    {
-      "name": "Swamp Taro",
+    "Swamp Taro": {
+      "crop_name": "Swamp Taro",
       "category": "Wetland Starch",
       "ph_range": [5.2, 7.0],
       "max_ec_salinity": 2.0,
       "drought_tolerance": "Very Low",
       "days_to_emergence": 12,
-      "days_to_full_harvest": 150,
-      "caloric_density_kcal_per_100g": 142,
+      "days_to_harvest": 150,
+      "emergency_days": 45,
+      "calories": "142 kcal / 100g",
       "tier": "Tier 2: Wetland Calorie Pillar",
       "why_viable": "Possesses internal aerenchyma tissue transporting atmospheric oxygen directly to submerged roots.",
       "failure_mitigation": "Must boil corms thoroughly prior to consumption to break down calcium oxalate crystals."
+    },
+    "Sweet Potato": {
+      "crop_name": "Sweet Potato",
+      "category": "Fast Tuber Starch",
+      "ph_range": [4.8, 7.0],
+      "max_ec_salinity": 2.5,
+      "drought_tolerance": "High",
+      "days_to_emergence": 7,
+      "days_to_harvest": 100,
+      "emergency_days": 25,
+      "calories": "130 kcal / 100g",
+      "tier": "Tier 1: Dual Leaf & Tuber Staple",
+      "why_viable": "Tolerates moderate soil acidity; shoots and leaves are edible within 25 days while tubers bulk underground.",
+      "failure_mitigation": "Avoid excess nitrogen fertilizers which cause lush leaf growth with zero tuber yield."
+    },
+    "Tepary Beans": {
+      "crop_name": "Tepary Beans",
+      "category": "Desert Legume",
+      "ph_range": [6.0, 8.5],
+      "max_ec_salinity": 3.5,
+      "drought_tolerance": "Extreme",
+      "days_to_emergence": 4,
+      "days_to_harvest": 65,
+      "emergency_days": 24,
+      "calories": "340 kcal / 100g",
+      "tier": "Tier 1: Arid Protein Pillar",
+      "why_viable": "Native to Sonoran desert; matures on a single rain soaking; highly protein dense.",
+      "failure_mitigation": "Do not overwater during pod filling stage."
     }
-  ]
+  },
+  "adaptive_contingencies": {
+    "flood": {
+      "trigger_keywords": ["flood", "rain", "torrential", "submerged", "standing water", "inundation"],
+      "action": "Excavate emergency peripheral herringbone ditches (30cm depth) sloping toward external retention sump.",
+      "triage": "Starch tubers (Cassava/Potatoes) at critical risk of anaerobic soft rot; harvest immediately if tubers have bulked. Rice/Taro unaffected.",
+      "remediation": "Incorporate coarse horticultural sand into top 10cm and inoculate with Trichoderma viride to suppress fungal Pythium damping-off."
+    },
+    "drought": {
+      "trigger_keywords": ["drought", "heat", "scorch", "dry", "sun", "desiccation", "heatwave"],
+      "action": "Apply immediate 10cm dry straw or leaf-litter blanket mulch to arrest capillary evaporation.",
+      "triage": "Channel 100% of available water allocation to C4 cereal grains (Millet/Sorghum); prune 35% of lower legume foliage to minimize transpiration loss.",
+      "remediation": "Install unglazed earthen olla pots at 1m grid spacing for subsurface root zone osmotic irrigation."
+    },
+    "pest": {
+      "trigger_keywords": ["pest", "locust", "insect", "caterpillar", "bug", "swarm", "chewing"],
+      "action": "Deploy cold-pressed botanical neem extract oil solution (3% concentration) and establish controlled perimeter smudge woodsmoke fires.",
+      "triage": "Harvest all edible above-ground vegetative greens immediately for solar dehydration and sealed emergency storage.",
+      "remediation": "Intercrop companion perimeter barrier rows of Tagetes (marigold) and aromatic Allium to scramble pest olfactory receptors."
+    },
+    "frost": {
+      "trigger_keywords": ["frost", "cold", "freeze", "subzero", "chill", "snow", "ice"],
+      "action": "Deploy temporary woven row cloches and execute light evening overhead sprinkler irrigation to release latent heat of fusion.",
+      "triage": "Cold-hardy cereals (Barley, Rye, Amaranth) survive down to -4°C; harvest all tender legume foliage prior to ground freezing.",
+      "remediation": "Mound 15cm compost mulch over plant crowns to insulate subterranean tubers from frost line penetration."
+    },
+    "salinity_spike": {
+      "trigger_keywords": ["salt", "brackish", "tidal", "seawater", "storm surge", "saline intrusion"],
+      "action": "Broadcast 500g/m² agricultural gypsum (CaSO4) immediately to saturate clay colloids with calcium.",
+      "triage": "Cease chemical fertilization immediately to prevent osmotic pressure spikes; isolate sensitive legumes.",
+      "remediation": "Flood beds with harvested non-saline rainwater to drive displaced sodium ions below the 40cm root horizon."
+    }
+  }
 }
