@@ -1,74 +1,63 @@
-# 🌱 TERRAFORM: Single-Handed VS Code Playbook
+# 🌱 Scratch Farming: Intelligent Soil Diagnostics & Crop Planning Platform
 
-> **Event Date:** October 15  
-> **Mission:** Transform unknown bare soil into a full harvest survival roadmap using AI First-Principles Agronomy.
+> **Mission:** Transform uncharted, degraded, or extreme soil terrain into productive agricultural land with automated soil chemistry analysis, calculated remediation dosages, and climate-matched crop plans.
 
 ---
 
-## 1. Opening & Running in Visual Studio Code (VSC)
+## 1. Quick Start in Visual Studio Code
 
-### Step 1: Open Folder in VS Code
+### Step 1: Open the Project
 1. Open **Visual Studio Code**.
-2. Click **File > Open Folder...** (or press `Ctrl + K`, `Ctrl + O`).
-3. Select this folder:
+2. Go to **File > Open Folder...** (`Ctrl + K, Ctrl + O`).
+3. Select this directory:
    ```text
    C:\Users\Chinmay\.gemini\antigravity\scratch\terraform
    ```
 
-### Step 2: Select Python Interpreter
-1. Press `Ctrl + Shift + P` to open the Command Palette.
-2. Type `Python: Select Interpreter` and hit Enter.
-3. Choose your active Python installation (Python 3.12+ or 3.14).
-
-### Step 3: Run the Application
-You can run it in **two ways**:
-- **Option A (One-Click F5 Debugger):** Press `F5` on your keyboard. VS Code will automatically launch Streamlit using the pre-configured `.vscode/launch.json`.
-- **Option B (Terminal Command):** Press `Ctrl + ~` to open the integrated terminal in VS Code and run:
-  ```powershell
-  streamlit run app.py
-  ```
-Your default browser will immediately open to: `http://localhost:8501`.
-
----
-
-## 2. The Solo / Single-Handed Workflow Layout in VS Code
-
-Building single-handedly is an immense competitive advantage because there is zero communication overhead and zero git conflicts. In VS Code, organize your workspace like a command center:
-
+### Step 2: Run the Application
+In your VS Code terminal (press ``Ctrl + ` ``), run:
+```powershell
+python -m streamlit run app.py
 ```
-┌─────────────────────────────────┬─────────────────────────────────┐
-│  EDITOR LEFT:                   │  EDITOR RIGHT:                  │
-│  core/reasoner.py               │  app.py                         │
-│  (Multimodal AI logic & domain  │  (Streamlit visual telemetry &  │
-│   soil chemistry rules)         │   judge controls)               │
-├─────────────────────────────────┴─────────────────────────────────┤
-│  SPLIT TERMINAL (BOTTOM):                                         │
-│  [Terminal 1: streamlit run app.py]  |  [Terminal 2: python tests]│
-└───────────────────────────────────────────────────────────────────┘
-```
-
-1. **Split Editor:** Right-click `app.py` in the explorer and click **Open to the Side** (`Ctrl + \`).
-2. **Auto-Reload:** Every time you press `Ctrl + S` in `app.py` or `reasoner.py`, Streamlit detects the change and prompts you to **Rerun** in the browser.
+Your browser will open automatically to `http://localhost:8501`.
 
 ---
 
-## 3. How the Offline & Online Modes Work
+## 2. Agricultural Technology Design System
 
-- **Online Mode (Gemini 2.5 Flash Multimodal):**
-  - Enter your API Key in the left sidebar or set environment variable `GEMINI_API_KEY`.
-  - Ingests the judge's uploaded photo (Rule 19) + text description directly into Gemini Flash.
-- **Fail-Safe Offline Mode:**
-  - If venue Wi-Fi drops or API rate limits hit, the system **automatically and invisibly switches** to our deterministic First-Principles Agronomy engine in `core/reasoner.py`.
-  - Zero crashes, zero blank screens, 100% reliable during live judge tests.
+* **Primary:** Forest Green (`#173F2A`)
+* **Secondary:** Botanical Green (`#32804A`)
+* **Background:** Warm Off-White (`#F8FAF6`)
+* **Soft Accent:** Sage (`#EAF3E8`)
+* **Text:** Dark Charcoal-Green (`#24352B`)
+* **Typography:** Clean, legible sans-serif with accessible contrast (>7:1 ratio).
 
 ---
 
-## 4. Live Judge Demo in 3 Minutes
+## 3. Application Architecture & Workflows
 
-1. **Rule 19 Live Image:** Ask the judge for their scenario photo and upload it into **STEP 1: OFFICIAL SCENARIO IMAGE**.
-2. **Scenario Text:** Paste their unseen scenario narrative in **STEP 2**.
-3. **Click "Initiate Planetary Terraforming":**
-   - Show the **Soil Health Radar Chart** comparing baseline toxic soil with post-treatment target.
-   - Point out the **Calculated Chemical Dosages** (e.g. 350g/m² Agricultural Lime for Al3+ neutralization).
-   - Show the **Two-Tier Crop Plan**: Emergency protein greens in 22 days (Cowpea) + Sustained starch tubers in 180 days (Cassava).
-4. **The Curveball Finale:** Expand the **Live Judge Stress-Test Terminal** at the bottom and ask the judge to throw any natural disaster at your land!
+1. **Field Input & Observation Console:**
+   - Pre-calibrated reference archetype dropdown for instant 1-click loading (*Arid Sand, Coastal Saline, Acidic Laterite Clay, Rocky Mountain Slope, Wetland Peat*).
+   - Descriptive field narrative console for custom soil observations.
+   - Ground surface image uploader (supporting Rule 19 multimodal computer vision).
+2. **Soil Diagnostics & Limiting Factors (Tab 1):**
+   - 5 KPI Metric Cards: Soil pH, Salinity (EC), Moisture Retention %, Organic Carbon %, and Soil Fertility Index.
+   - Physiological Limiting Factors alert box (plain-language explanation of plant growth barriers).
+   - Soil Health Radar Chart comparing raw baseline values against remediated agricultural targets.
+3. **Targeted Remediation Protocols (Tab 2):**
+   - Sequential, numbered conditioning steps with exact calculated dosages ($CaCO_3$ Agricultural Lime, $CaSO_4$ Gypsum, Biochar, French Drains).
+   - First-principles scientific rationale for every treatment.
+4. **Two-Tier Crop Matchmaker (Tab 3):**
+   - Pairs rapid emergency foliage crops (e.g. Cowpea greens in 22 days) with long-term high-calorie carbohydrate staples (e.g. Cassava tubers in 180 days).
+   - Visual viability score percentage and failure risk mitigation notes.
+5. **Seasonal Harvest Roadmap (Tab 4):**
+   - Chronological phase-by-phase action plan from ground stabilization to final storage.
+6. **Adaptive Crisis Simulator (Tab 5):**
+   - Interactive crisis query terminal allowing live simulation of unseasonal weather, flash floods, frost, drought, and pest pressure.
+
+---
+
+## 4. Dual-Mode Resilience (Online & Offline)
+
+* **Online Multimodal Engine:** When an optional Gemini API key is provided, the system leverages multimodal vision to analyze soil cracking patterns, iron oxide coloration, and surface salt efflorescence.
+* **Deterministic Offline Engine:** If venue Wi-Fi is disconnected or an API key is unavailable, the built-in First-Principles Agronomic Engine executes locally with zero external latency, ensuring 100% reliability during live testing.

@@ -275,25 +275,31 @@ Provide a concise, scientifically rigorous tactical agronomic response in 3-4 bu
     q_low = question.lower()
     if "flood" in q_low or "rain" in q_low:
         return (
-            "• **Immediate Action:** Dig secondary peripheral French ditches (30cm deep) to intercept surface water before root zone saturates.\n"
-            "• **Triage:** Tubers (Cassava) at high risk of soft rot; harvest immediately if within 3 weeks of bulking. Rice/Taro unaffected.\n"
-            "• **Biological Defense:** Inoculate with Trichoderma viride to prevent Pythium root rot once standing water recedes."
+            "- **Immediate Action:** Dig secondary peripheral French ditches (30cm deep) to intercept surface water before root zone saturates.\n"
+            "- **Triage:** Tubers (Cassava) at high risk of soft rot; harvest immediately if within 3 weeks of bulking. Rice/Taro unaffected.\n"
+            "- **Biological Defense:** Inoculate with Trichoderma viride to prevent Pythium root rot once standing water recedes."
         )
     elif "drought" in q_low or "heat" in q_low:
         return (
-            "• **Immediate Action:** Lay 10cm straw/vegetative sheet mulch over all exposed soil beds to halt evaporation.\n"
-            "• **Triage:** Shift all available water to high-C4 photosynthetic crops (Millet/Sorghum); prune outer leaves of legumes to cut transpiration.\n"
-            "• **Emergency Field Adjustment:** Install sub-surface clay olla pots for root-directed irrigation."
+            "- **Immediate Action:** Lay 10cm straw/vegetative sheet mulch over all exposed soil beds to halt evaporation.\n"
+            "- **Triage:** Shift all available water to high-C4 photosynthetic crops (Millet/Sorghum); prune outer leaves of legumes to cut transpiration.\n"
+            "- **Emergency Field Adjustment:** Install sub-surface clay olla pots for root-directed irrigation."
         )
     elif "pest" in q_low or "locust" in q_low or "bug" in q_low:
         return (
-            "• **Immediate Action:** Deploy biological neem extract oil spray (3% concentration) combined with continuous perimeter woodsmoke.\n"
-            "• **Triage:** Harvest all mature vegetative foliage immediately for dehydrated storage before insect swarm damage.\n"
-            "• **Biological Counter:** Establish companion barrier rows of marigold and aromatic alliums to disrupt pest olfactory tracking."
+            "- **Immediate Action:** Deploy biological neem extract oil spray (3% concentration) combined with continuous perimeter woodsmoke.\n"
+            "- **Triage:** Harvest all mature vegetative foliage immediately for dehydrated storage before insect swarm damage.\n"
+            "- **Biological Counter:** Establish companion barrier rows of marigold and aromatic alliums to disrupt pest olfactory tracking."
+        )
+    elif "frost" in q_low or "cold" in q_low or "freeze" in q_low:
+        return (
+            "- **Immediate Action:** Deploy portable row covers / cloches and perform light evening irrigation to release latent heat of condensation.\n"
+            "- **Triage:** Cold-hardy root crops (Potatoes, Rye, Barley) survive down to -4°C; harvest mature vegetative leaves immediately.\n"
+            "- **Field Adjustment:** Apply thick compost mulch over crowns to protect root tubers from frost penetration."
         )
     else:
         return (
-            f"• **Tactical Field Analysis:** Query evaluated against current soil baseline ({context.get('scenario_analysis', {}).get('identified_archetype', 'Terrain')}).\n"
-            "• **Immediate Remediation:** Adjust soil buffering capacity and maintain organic matter cover to absorb stress.\n"
-            "• **Roadmap Resilience:** System adapts harvest timeline by prioritizing high-tolerance pioneer crops."
+            f"- **Tactical Field Analysis:** Query evaluated against current soil baseline ({context.get('scenario_analysis', {}).get('identified_archetype', 'Terrain')}).\n"
+            "- **Immediate Remediation:** Adjust soil buffering capacity and maintain organic matter cover to absorb stress.\n"
+            "- **Roadmap Resilience:** System adapts harvest timeline by prioritizing high-tolerance pioneer crops."
         )
